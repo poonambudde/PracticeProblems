@@ -1,11 +1,15 @@
-#!/bin/bash -x
+#!/bin/bash
 
-read -p "Enter a number: " number
-count=0
-num=1
-while (( $count <= $number )) 
+echo "Enter a Number:"
+read number
+
+exp=2
+result=1
+
+while [  $result -le 256 ]
 do
-      echo $num
-      (( num=2*$num )) 
-      (( count++ ))
+    echo  "power table of the $number is:$result"
+
+    result=$(($result*$exp))
+
 done
